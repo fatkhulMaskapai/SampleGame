@@ -196,9 +196,8 @@
         // console.log("Nama: " + data.name);
         console.log("Email: " + data.email);
         // console.log("Picture: " + data.picture);
-        // var tikData = {imageUrl: data.picture, nickname: data.name, email: data.email};
         // console.log("AllData: ", data);
-        // startGame();
+        var tikData = {imageUrl: data.picture, nickname: data.name, email: data.email};
         unityInstance.SendMessage('FirebaseBridge', 'OnSuccessLoginGoogle', JSON.stringify(tikData));
         showGoogleButtonJs("0");
     }
